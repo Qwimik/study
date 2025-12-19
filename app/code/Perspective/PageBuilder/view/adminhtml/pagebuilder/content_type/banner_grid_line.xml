@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
+    <type name="banner-grid-line"
+          label="Banner Grid Line"
+          component="Magento_PageBuilder/js/content-type-collection"
+          preview_component="Perspective_PageBuilder/js/content-type/banner-grid-line/preview"
+          master_component="Magento_PageBuilder/js/content-type/master-collection"
+          sortOrder="10"
+          translate="label">
+        <parents default_policy="deny">
+            <parent name="banner-grid-group" policy="allow"/>
+        </parents>
+        <children default_policy="deny">
+            <child name="banner-grid-item" policy="allow"/>
+        </children>
+        <is_system>false</is_system>
+        <appearances>
+            <appearance default="true"
+                        name="default"
+                        preview_template="Perspective_PageBuilder/content-type/banner-grid-line/default/preview"
+                        master_template="Perspective_PageBuilder/content-type/banner-grid-line/default/master"
+                        reader="Magento_PageBuilder/js/master-format/read/configurable">
+                <elements>
+                    <element name="main">
+                        <attribute name="name" source="data-content-type"/>
+                        <attribute name="appearance" source="data-appearance"/>
+                        <attribute name="grid_size" source="data-grid-size"/>
+                        <static_style source="display" value="flex"/>
+                        <static_style source="width" value="100%"/>
+                    </element>
+                </elements>
+            </appearance>
+        </appearances>
+    </type>
+</config>

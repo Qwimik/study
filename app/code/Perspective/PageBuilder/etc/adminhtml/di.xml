@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="AppearanceSourceBannerGridGroup" type="Magento\PageBuilder\Model\Source\VisualSelect">
+        <arguments>
+            <argument name="optionsSize" xsi:type="string">large</argument>
+            <argument name="optionsData" xsi:type="array">
+                <item name="0" xsi:type="array">
+                    <item name="value" xsi:type="string">default</item>
+                    <item name="title" xsi:type="string" translate="true">Default</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="AppearanceSourceBannerGridItem" type="Magento\PageBuilder\Model\Source\VisualSelect">
+        <arguments>
+            <argument name="optionsSize" xsi:type="string">large</argument>
+            <argument name="optionsData" xsi:type="array">
+                <item name="0" xsi:type="array">
+                    <item name="value" xsi:type="string">full-height</item>
+                    <item name="title" xsi:type="string" translate="true">Full Height</item>
+                    <item name="icon" xsi:type="string">Magento_PageBuilder::css/images/content-type/column/appearance/full.svg</item>
+                </item>
+                <item name="1" xsi:type="array">
+                    <item name="value" xsi:type="string">align-top</item>
+                    <item name="title" xsi:type="string" translate="true">Top Aligned</item>
+                    <item name="icon" xsi:type="string">Magento_PageBuilder::css/images/content-type/column/appearance/top.svg</item>
+                </item>
+                <item name="2" xsi:type="array">
+                    <item name="value" xsi:type="string">align-center</item>
+                    <item name="title" xsi:type="string" translate="true">Centered</item>
+                    <item name="icon" xsi:type="string">Magento_PageBuilder::css/images/content-type/column/appearance/middle.svg</item>
+                </item>
+                <item name="3" xsi:type="array">
+                    <item name="value" xsi:type="string">align-bottom</item>
+                    <item name="title" xsi:type="string" translate="true">Bottom Aligned</item>
+                    <item name="icon" xsi:type="string">Magento_PageBuilder::css/images/content-type/column/appearance/bottom.svg</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="AppearanceSourceBannerLink" type="Magento\PageBuilder\Model\Source\VisualSelect">
+        <arguments>
+            <argument name="optionsSize" xsi:type="string">large</argument>
+            <argument name="optionsData" xsi:type="array">
+                <item name="0" xsi:type="array">
+                    <item name="value" xsi:type="string">poster</item>
+                    <item name="title" xsi:type="string" translate="true">Poster</item>
+                    <item name="icon" xsi:type="string">Magento_PageBuilder::css/images/content-type/banner/appearance/poster.svg</item>
+                </item>
+                <item name="1" xsi:type="array">
+                    <item name="value" xsi:type="string">collage-left</item>
+                    <item name="title" xsi:type="string" translate="true">Collage Left</item>
+                    <item name="icon" xsi:type="string">Magento_PageBuilder::css/images/content-type/banner/appearance/collage-left.svg</item>
+                </item>
+                <item name="2" xsi:type="array">
+                    <item name="value" xsi:type="string">collage-centered</item>
+                    <item name="title" xsi:type="string" translate="true">Collage Centered</item>
+                    <item name="icon" xsi:type="string">Magento_PageBuilder::css/images/content-type/banner/appearance/collage-centered.svg</item>
+                </item>
+                <item name="3" xsi:type="array">
+                    <item name="value" xsi:type="string">collage-right</item>
+                    <item name="title" xsi:type="string" translate="true">Collage Right</item>
+                    <item name="icon" xsi:type="string">Magento_PageBuilder::css/images/content-type/banner/appearance/collage-right.svg</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+</config>

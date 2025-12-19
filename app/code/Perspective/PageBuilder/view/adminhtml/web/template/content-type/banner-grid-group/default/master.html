@@ -1,0 +1,13 @@
+<div class="pagebuilder-banner-grid-group"
+     attr="data.main.attributes"
+     ko-style="Object.assign(data.container.style, data.main.style)"
+     css="data.main.css">
+    <if args="data.main.attributes()['data-banner-grid-title']">
+        <div class="banner-grid-title-container">
+            <span class="banner-grid-title-decor-line"></span>
+            <p class="banner-grid-title" data-bind="text: data.main.attributes()['data-banner-grid-title']"></p>
+            <span class="banner-grid-title-decor-line"></span>
+        </div>
+    </if>
+    <render args="masterTemplate"></render>
+</div>
