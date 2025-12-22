@@ -65,4 +65,22 @@
             </argument>
         </arguments>
     </virtualType>
+    <virtualType name="AppearanceSourceCustomProducts" type="Magento\PageBuilder\Model\Source\VisualSelect">
+        <arguments>
+            <argument name="optionsSize" xsi:type="string">large</argument>
+            <argument name="optionsData" xsi:type="array">
+                <item name="0" xsi:type="array">
+                    <item name="value" xsi:type="string">grid</item>
+                    <item name="title" xsi:type="string" translate="true">Grid</item>
+                    <item name="icon" xsi:type="string">Magento_PageBuilder::css/images/content-type/products/appearance/grid.svg</item>
+                </item>
+                <item name="1" xsi:type="array">
+                    <item name="value" xsi:type="string">carousel</item>
+                    <item name="title" xsi:type="string" translate="true">Carousel</item>
+                    <item name="icon" xsi:type="string">Magento_PageBuilder::css/images/content-type/products/appearance/carousel.svg</item>
+                    <item name="noticeMessage" xsi:type="string" translate="true">Changing appearance will disable slide autoplay settings.</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
 </config>
