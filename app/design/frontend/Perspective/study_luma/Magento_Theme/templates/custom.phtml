@@ -1,0 +1,11 @@
+<?php
+use Magento\Framework\Escaper;
+
+/** @var Escaper $escaper */
+?>
+
+<div>
+    <p>
+        <?= $escaper->escapeHtml(__('Custom text')) ?>
+    </p>
+</div>
