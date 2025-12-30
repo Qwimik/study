@@ -1,0 +1,35 @@
+& when (@media-common = true) {
+    .pagebuilder-banner-grid-item {
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            filter: brightness(1.15);
+        }
+
+        [data-content-type="banner-link"] {
+            a,
+            a:hover,
+            a:visited {
+                color: currentColor !important;
+                text-decoration: none !important;
+            }
+
+            [data-element="content"] {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            p {
+                color: #fff;
+                font-size: 16px;
+                font-weight: 600;
+                text-align: center;
+                z-index: 10;
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                margin: 0 !important;
+                padding: 0;
+            }
+        }
+    }
+}

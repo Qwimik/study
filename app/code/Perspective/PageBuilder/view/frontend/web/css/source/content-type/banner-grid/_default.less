@@ -1,0 +1,36 @@
+& when (@media-common = true) {
+    .pagebuilder-banner-grid-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        .banner-grid-title-container {
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .banner-grid-title-decor-line {
+            display: block;
+            height: 2px;
+            background-color: #686868;
+            opacity: 0.7;
+            flex-grow: 1;
+        }
+
+        .banner-grid-title {
+            text-transform: capitalize;
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+            font-weight: 600;
+            color: #4c4c4c;
+            text-align: center;
+        }
+
+        .pagebuilder-banner-grid-line {
+            gap: 16px;
+        }
+    }
+}

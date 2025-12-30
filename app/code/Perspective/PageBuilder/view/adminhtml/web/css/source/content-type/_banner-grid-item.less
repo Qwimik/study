@@ -1,0 +1,119 @@
+.pagebuilder-content-type.children-min-height.pagebuilder-banner-grid-item {
+    display: flex;
+    margin-right: 1px;
+
+    .pagebuilder-banner-grid-item-inner > .element-children {
+        flex: 1;
+        max-width: 100%;
+        min-height: initial;
+        padding: 0;
+    }
+}
+
+.pagebuilder-banner-grid-item-inner {
+    display: flex;
+    max-width: 100%;
+    min-height: initial;
+    width: 100%;
+}
+
+.pagebuilder-content-type.pagebuilder-banner-grid-item {
+    min-height: 150px;
+
+    &.empty-container {
+        min-height: 300px;
+    }
+
+    .pagebuilder-banner-grid-item-resize-handle {
+        background: @color-pagebuilder-light-blue;
+        bottom: 0;
+        cursor: col-resize;
+        height: calc(~'100% + 30px');
+        opacity: 0;
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        transition: .5s opacity;
+        width: 15px;
+        z-index: 28;
+
+        &:hover {
+            opacity: .3;
+        }
+    }
+
+    .pagebuilder-resizing {
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        background: @color-pagebuilder-light-blue;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition: .5s opacity;
+        user-select: none;
+        visibility: hidden;
+        width: 100%;
+        z-index: 24;
+
+        * {
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        &:hover {
+            border: 1px solid @text-color;
+        }
+    }
+
+    &.active {
+        opacity: .5;
+        transition: .5s opacity;
+        visibility: visible;
+    }
+}
+
+.pagebuilder-content-type-hidden .pagebuilder-banner-grid-item-resize-handle,
+.pagebuilder-stage.interacting .pagebuilder-content-type.pagebuilder-banner-grid-item .pagebuilder-banner-grid-item-resize-handle {
+    display: none;
+}
+
+.pagebuilder-stage .pagebuilder-banner-grid-group.resizing .pagebuilder-content-type.pagebuilder-banner-grid-item .pagebuilder-banner-grid-item-resize-handle {
+    display: block;
+}
+
+.pagebuilder-banner-grid-item {
+    [data-content-type="banner-link"] {
+        a,
+        a:hover,
+        a:visited {
+            color: currentColor !important;
+            text-decoration: none !important;
+        }
+
+        [data-element="content"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            z-index: 10;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin: 0 !important;
+            padding: 0;
+        }
+    }
+}
